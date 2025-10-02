@@ -34,8 +34,10 @@ footer { grid-area: f }
 @media screen and (max-width: 980px) {
     main {
         grid-template-areas: "h"
-                            "a"
+                            "n"
+                            "s"
                             "as"
+                            "a"
                             "f";
         grid-template-rows: 250px repeat(4, 1fr) 250px;
     }
