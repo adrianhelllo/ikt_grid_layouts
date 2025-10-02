@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    grid-template-areas: "h h h"
+                        "n n n"
+                        "s s as"
+                        "a a as"
+                        "f f f";
+    grid-template-rows: 250px repeat(3, 1fr) 250px;
+    gap: 1rem;
+    height: 100%
+}
+
+body {
+    height: 100vh;
+}
+
+main > * {
+    background-color: gainsboro;
+}
+
+header { grid-area: h; }
+nav { grid-area: n; }
+article { grid-area: a; }
+section { grid-area: s;}
+aside { grid-area: as }
+footer { grid-area: f }
+
+@media screen and (max-width: 980px) {
+    main {
+        grid-template-areas: "h"
+                            "a"
+                            "as"
+                            "f";
+        grid-template-rows: 250px repeat(4, 1fr) 250px;
+    }
+}
